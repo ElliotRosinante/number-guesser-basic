@@ -52,6 +52,7 @@ export default function App() {
               placeholder="Enter your number here"
               value={numInput}
               onChange={handleChange}
+              disabled={chance === 0 ? true : false}
             />
             <input
               type="button"
@@ -66,7 +67,7 @@ export default function App() {
             className="success-message"
             style={{
               display: userGuessed ? "block" : "none",
-              marginTop: "10px"
+              marginTop: "10px",
             }}
           >
             You win! your guess was right!
